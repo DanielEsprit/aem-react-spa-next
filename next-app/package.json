@@ -1,0 +1,25 @@
+{
+  "name": "next-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "lib:sync": "node -e \"require('fs').rmSync('node_modules/aem-react-spa-next',{recursive:true,force:true})\" && npm install --no-audit --no-fund",
+    "predev": "npm run lib:sync",
+    "prebuild": "npm run lib:sync"
+  },
+  "dependencies": {
+    "aem-react-spa-next": "file:../packages/aem-react-spa-next",
+    "next": "16.4.2",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^9",
+    "eslint-config-next": "16.4.2",
+    "sass": "^1.106.1"
+  }
+}

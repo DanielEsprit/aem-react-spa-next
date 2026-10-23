@@ -1,0 +1,28 @@
+{
+  "name": "aem-react-spa-next",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SSR/hydration-safe port of the aem-react-spa components for Next.js (App Router)",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": "./src/index.js",
+    "./server": "./src/server/index.js",
+    "./styles/index.scss": "./src/styles/index.scss"
+  },
+  "sideEffects": [
+    "*.css",
+    "*.scss",
+    "./src/components/**"
+  ],
+  "dependencies": {
+    "@adobe/aem-react-editable-components": "^2.1.1",
+    "@adobe/aem-spa-component-mapping": "^1.1.1",
+    "@adobe/aem-spa-page-model-manager": "^1.5.0",
+    "sanitize-html": "^2.18.1"
+  },
+  "peerDependencies": {
+    "next": ">=15",
+    "react": ">=18",
+    "react-dom": ">=18"
+  }
+}
