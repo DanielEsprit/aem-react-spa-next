@@ -17,7 +17,6 @@ import { EditableComponent, Page } from '@adobe/aem-react-editable-components';
 import React, { useMemo } from 'react';
 import { seedModelManager } from './model-manager';
 import modelToProps from './utils/model-to-props';
-import './components/import-components';
 
 /**
  * Next.js replacement for index.js + App.js.
@@ -25,6 +24,11 @@ import './components/import-components';
  * Renders an AEM page from a page model that was fetched on the server. Because the model
  * and `isInEditor` both arrive as props, the server render and the first client render
  * produce identical markup, so React can hydrate instead of re-rendering.
+ *
+ * AemPage does not register any components itself. The app renders it from its own
+ * "use client" module that first imports every MapTo() registration it needs (this
+ * package's built-ins via `aem-react-spa-next/components`, plus the project's own), so the
+ * ComponentMapping is filled in both the server render and the browser bundle.
  *
  * @param {object} props
  * @param {object} props.pageModel   - raw AEM page model (the `.model.json` response)

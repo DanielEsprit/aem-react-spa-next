@@ -11,9 +11,9 @@
  * governing permissions and limitations under the License.
  */
 
-// MapTo() registers into a module-level ComponentMapping. These imports must stay inside the
-// client module graph (they are pulled in by AemPage) so the mapping exists both during
-// SSR of the client components and in the browser bundle.
+// Built-in components, published as `aem-react-spa-next/components`. MapTo() registers into a
+// module-level ComponentMapping, so the app must import this from a "use client" module (next
+// to its own registrations) for the mapping to exist both during SSR and in the browser bundle.
 import './Text/Text'
 import './Page/Page'
 import './ExperienceFragment/ExperienceFragment'

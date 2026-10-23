@@ -1,0 +1,16 @@
+{
+  "name": "example-aem-components",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Example of an existing MapTo() component library rendered by the Next.js app",
+  "license": "Apache-2.0",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "sideEffects": true,
+  "peerDependencies": {
+    "@adobe/aem-react-editable-components": "^2.1.1",
+    "aem-react-spa-next": "*",
+    "react": ">=18"
+  }
+}

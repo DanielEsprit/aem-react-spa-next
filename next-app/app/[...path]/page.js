@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { AemPage } from "aem-react-spa-next";
+import AemPage from "@/aem/AemPage";
 import { isInEditorFromSearchParams, toPagePath } from "aem-react-spa-next/server";
 import { getPageModel, getPageModelUncached, isContentPath } from "@/lib/aem";
 

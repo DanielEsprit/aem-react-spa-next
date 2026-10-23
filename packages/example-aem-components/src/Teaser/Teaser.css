@@ -1,0 +1,14 @@
+.teaser {
+  border: 1px solid #d9dde3;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 16px 0;
+}
+
+.teaser__title {
+  margin-bottom: 4px;
+}
+
+.teaser__description {
+  margin-bottom: 8px;
+}

@@ -12,6 +12,8 @@ npm run build && npm start
 |------|---------|
 | `app/[...path]/page.js` | Catch-all route. Fetches the page model on the server and renders `<AemPage>` |
 | `app/layout.js` | Global styles and disables the ModelManager's own router |
+| `aem/register-components.js` | Every `MapTo()` registration the site uses (built-ins + project libraries). Must stay `"use client"` |
+| `aem/AemPage.js` | The client boundary: loads the registrations, renders the library's `AemPage` |
 | `lib/aem.js` | Model fetching (`"use cache"` for published content, uncached for authoring) |
 | `app/api/aem/[...path]/route.js` | Same-origin proxy for the browser-side ModelManager (keeps AEM credentials on the server) |
 | `app/mock-aem/[...path]/route.js` + `mock-aem/` | Mock AEM serving `.model.json` fixtures |

@@ -29,13 +29,17 @@
           "columnClassNames": {
             "navigation": "aem-GridColumn aem-GridColumn--default--12",
             "text": "aem-GridColumn aem-GridColumn--default--12",
+            "teaser": "aem-GridColumn aem-GridColumn--default--12",
             "image": "aem-GridColumn aem-GridColumn--default--12",
+            "quote": "aem-GridColumn aem-GridColumn--default--12",
             "text_1": "aem-GridColumn aem-GridColumn--default--12"
           },
           ":itemsOrder": [
             "navigation",
             "text",
+            "teaser",
             "image",
+            "quote",
             "text_1"
           ],
           ":items": {
@@ -72,10 +76,22 @@
               "text": "<h1>Hello from AEM, rendered by Next.js</h1><p class=\"lead\">This page model was fetched on the server and hydrated on the client.</p>",
               "richText": true
             },
+            "teaser": {
+              ":type": "example/components/teaser",
+              "title": "A teaser from the existing component library",
+              "description": "Written for editable-components v1: MapTo(type)(Teaser, EditConfig) with plain props.",
+              "linkURL": "/content/aem-react-spa/us/en/about.html",
+              "linkText": "Go to About"
+            },
             "image": {
               ":type": "aem-react-spa/components/image",
               "src": "/content/dam/aem-react-spa/sample.svg",
               "alt": "Sample image"
+            },
+            "quote": {
+              ":type": "example/components/quote",
+              "quote": "v2-style components work unchanged.",
+              "author": "example-aem-components"
             },
             "text_1": {
               ":type": "aem-react-spa/components/text",

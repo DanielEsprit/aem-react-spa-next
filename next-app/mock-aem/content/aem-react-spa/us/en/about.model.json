@@ -29,12 +29,14 @@
           "columnClassNames": {
             "navigation": "aem-GridColumn aem-GridColumn--default--12",
             "text": "aem-GridColumn aem-GridColumn--default--12",
-            "text_1": "aem-GridColumn aem-GridColumn--default--12"
+            "text_1": "aem-GridColumn aem-GridColumn--default--12",
+            "teaser": "aem-GridColumn aem-GridColumn--default--12"
           },
           ":itemsOrder": [
             "navigation",
             "text",
-            "text_1"
+            "text_1",
+            "teaser"
           ],
           ":items": {
             "navigation": {
@@ -74,6 +76,9 @@
               ":type": "aem-react-spa/components/text",
               "text": "Plain (non-rich) text component",
               "richText": false
+            },
+            "teaser": {
+              ":type": "example/components/teaser"
             }
           }
         }

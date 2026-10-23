@@ -7,12 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "lib:sync": "node -e \"require('fs').rmSync('node_modules/aem-react-spa-next',{recursive:true,force:true})\" && npm install --no-audit --no-fund",
+    "lib:sync": "node -e \"for (const d of ['aem-react-spa-next','example-aem-components']) require('fs').rmSync('node_modules/'+d,{recursive:true,force:true})\" && npm install --no-audit --no-fund",
     "predev": "npm run lib:sync",
     "prebuild": "npm run lib:sync"
   },
   "dependencies": {
     "aem-react-spa-next": "file:../packages/aem-react-spa-next",
+    "example-aem-components": "file:../packages/example-aem-components",
     "next": "16.4.2",
     "react": "19.3.0",
     "react-dom": "19.3.0"
