@@ -1,0 +1,13 @@
+aem-react-spa-next
+Copyright 2022 Adobe. All rights reserved.
+
+This product is a derivative work of aem-react-spa (https://github.com/adobe/aem-react-spa),
+Copyright 2022 Adobe, licensed under the Apache License, Version 2.0 (see LICENSE.txt).
+
+The original Create React App project (src/, scripts/, public/ and its build configuration)
+has been removed. Its components were ported to packages/aem-react-spa-next and modified to
+run under Next.js server rendering and hydration. Each modified source file says so in its
+header; files that are new in this project are marked "Part of aem-react-spa-next".
+
+packages/aem-react-spa-next/src/utils/model-to-props.js is adapted from
+@adobe/aem-react-editable-components (Copyright Adobe, Apache License, Version 2.0).

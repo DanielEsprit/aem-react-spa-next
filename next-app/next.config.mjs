@@ -4,14 +4,14 @@ const nextConfig = {
   cacheComponents: true,
   partialPrefetching: true,
 
-  // The CRA app's lockfile one level up would otherwise be picked as the workspace root.
+  // Pin the workspace root to this app so a lockfile in a parent folder is never picked instead.
   turbopack: { root: import.meta.dirname },
 
   // aem-react-spa-next ships untranspiled JSX + "use client" directives.
   transpilePackages: ["aem-react-spa-next"],
 
   async redirects() {
-    // Same as the CRA dev index.html: send "/" to the app's root page.
+    // Send "/" to the app's root page.
     return process.env.AEM_ROOT
       ? [{ source: "/", destination: process.env.AEM_ROOT, permanent: false }]
       : [];

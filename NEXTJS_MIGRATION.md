@@ -1,9 +1,9 @@
 # Running aem-react-spa on Next.js (SSR + hydration)
 
-This branch adds a proof of concept that runs the aem-react-spa components on **Next.js 16 (App Router, React 19)**. Pages are server-rendered and then hydrated on the client. The original Create-React-App project (`src/`, `scripts/`, `public/`) is unchanged.
+This branch adds a proof of concept that runs the aem-react-spa components on **Next.js 16 (App Router, React 19)**. Pages are server-rendered and then hydrated on the client. The original Create-React-App project (`src/`, `scripts/`, `public/`) has since been removed. It is still in git history before this change, and the analysis below refers to its files. Licence and attribution are kept in `LICENSE.txt` and `NOTICE`.
 
 ```
-packages/aem-react-spa-next/   SSR-safe port of src/ (the "library")
+packages/aem-react-spa-next/   SSR-safe port of the original src/ (the "library")
 next-app/                      create-next-app boilerplate that consumes it
 ```
 
